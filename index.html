@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaOS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Desktop -->
+    <main class="desktop">
+
+        <!-- Desktop Header -->
+        <div class="top-bar">
+
+            <div class="system-name">
+                ◈ NovaOS
+            </div>
+
+            <div class="system-status">
+                <span>Wi-Fi</span>
+                <span>🔋 100%</span>
+                <span id="clock">12:00</span>
+            </div>
+
+        </div>
+
+
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+
+            <button class="desktop-icon" onclick="openApp('files')">
+                <span class="icon">📁</span>
+                <span>Files</span>
+            </button>
+
+            <button class="desktop-icon" onclick="openApp('notes')">
+                <span class="icon">📝</span>
+                <span>Notes</span>
+            </button>
+
+            <button class="desktop-icon" onclick="openApp('calculator')">
+                <span class="icon">🧮</span>
+                <span>Calculator</span>
+            </button>
+
+            <button class="desktop-icon" onclick="openApp('settings')">
+                <span class="icon">⚙️</span>
+                <span>Settings</span>
+            </button>
+
+        </div>
+
+
+        <!-- Welcome -->
+        <section class="welcome">
+
+            <p class="small-text">WELCOME BACK</p>
+
+            <h1>
+                Good evening 👋
+            </h1>
+
+            <p>
+                Explore your NovaOS desktop.
+            </p>
+
+        </section>
+
+
+        <!-- Dock -->
+        <div class="dock">
+
+            <button onclick="openApp('files')" title="Files">
+                📁
+            </button>
+
+            <button onclick="openApp('notes')" title="Notes">
+                📝
+            </button>
+
+            <button onclick="openApp('calculator')" title="Calculator">
+                🧮
+            </button>
+
+            <button onclick="openApp('settings')" title="Settings">
+                ⚙️
+            </button>
+
+            <div class="dock-line"></div>
+
+            <button onclick="togglePowerMenu()" title="Power">
+                ⏻
+            </button>
+
+        </div>
+
+
+        <!-- Files Window -->
+        <div class="app-window" id="files">
+
+            <div class="window-header">
+
+                <strong>📁 Files</strong>
+
+                <button onclick="closeApp('files')">
+                    ×
+                </button>
+
+            </div>
+
+            <div class="window-content">
+
+                <h2>My Files</h2>
+
+                <div class="file-grid">
+
+                    <div class="file-item">
+                        📂
+                        <span>Documents</span>
+                    </div>
+
+                    <div class="file-item">
+                        📂
+                        <span>Projects</span>
+                    </div>
+
+                    <div class="file-item">
+                        🖼️
+                        <span>Pictures</span>
+                    </div>
+
+                    <div class="file-item">
+                        🎵
+                        <span>Music</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Notes Window -->
+        <div class="app-window" id="notes">
+
+            <div class="window-header">
+
+                <strong>📝 Notes</strong>
+
+                <button onclick="closeApp('notes')">
+                    ×
+                </button>
+
+            </div>
+
+            <div class="window-content">
+
+                <textarea
+                    id="notesArea"
+                    placeholder="Start writing..."
+                ></textarea>
+
+            </div>
+
+        </div>
+
+
+        <!-- Calculator Window -->
+        <div class="app-window" id="calculator">
+
+            <div class="window-header">
+
+                <strong>🧮 Calculator</strong>
+
+                <button onclick="closeApp('calculator')">
+                    ×
+                </button>
+
+            </div>
+
+            <div class="window-content">
+
+                <input
+                    id="calcDisplay"
+                    class="calc-display"
+                    type="text"
+                    readonly
+                    value="0"
+                >
+
+                <div class="calc-grid">
+
+                    <button onclick="clearCalc()">C</button>
+                    <button onclick="calcInput('/')">÷</button>
+                    <button onclick="calcInput('*')">×</button>
+                    <button onclick="calcInput('-')">−</button>
+
+                    <button onclick="calcInput('7')">7</button>
+                    <button onclick="calcInput('8')">8</button>
+                    <button onclick="calcInput('9')">9</button>
+                    <button onclick="calcInput('+')">+</button>
+
+                    <button onclick="calcInput('4')">4</button>
+                    <button onclick="calcInput('5')">5</button>
+                    <button onclick="calcInput('6')">6</button>
+                    <button onclick="calculate()">=</button>
+
+                    <button onclick="calcInput('1')">1</button>
+                    <button onclick="calcInput('2')">2</button>
+                    <button onclick="calcInput('3')">3</button>
+                    <button onclick="calcInput('0')">0</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Settings Window -->
+        <div class="app-window" id="settings">
+
+            <div class="window-header">
+
+                <strong>⚙️ Settings</strong>
+
+                <button onclick="closeApp('settings')">
+                    ×
+                </button>
+
+            </div>
+
+            <div class="window-content">
+
+                <h2>System Settings</h2>
+
+                <div class="setting">
+
+                    <div>
+                        <strong>Dark Mode</strong>
+                        <p>Change the appearance of NovaOS.</p>
+                    </div>
+
+                    <button onclick="toggleTheme()">
+                        Toggle
+                    </button>
+
+                </div>
+
+                <div class="setting">
+
+                    <div>
+                        <strong>System</strong>
+                        <p>NovaOS Web Edition</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Power Menu -->
+        <div class="power-menu" id="powerMenu">
+
+            <h3>NovaOS</h3>
+
+            <button onclick="location.reload()">
+                🔄 Restart
+            </button>
+
+            <button onclick="togglePowerMenu()">
+                Cancel
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
