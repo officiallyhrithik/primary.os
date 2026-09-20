@@ -49,7 +49,7 @@ NovaOS/
 
 Clone the repository:
 
-git clone https://github.com/YOUR_USERNAME/NovaOS.git
+git clone https://officiallyhrithik.github.io/nova.os/
 
 Open the project:
 
@@ -77,10 +77,10 @@ NovaOS will evolve into a complete AI-powered personal workspace, combining prod
 
 👨‍💻 Author
 
-mithrithik3027
+officiallyhrithik
 
 Built with curiosity, code, and a lot of ☕.
 
 ---
-
+explore at https://officiallyhrithik.github.io/nova.os/
 ⭐ If you like NovaOS, consider giving the repository a star!
