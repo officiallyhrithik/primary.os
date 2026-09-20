@@ -82,5 +82,4 @@ officiallyhrithik
 Built with curiosity, code, and a lot of ☕.
 
 ---
-explore at https://officiallyhrithik.github.io/nova.os/
-⭐ If you like NovaOS, consider giving the repository a star!
+explore at https://officiallyhrithik.github.io/nova.os
