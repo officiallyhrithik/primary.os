@@ -79,4 +79,4 @@ officiallyhrithik
 Built with curiosity, code, and a lot of ☕.
 
 ---
-explore at  officiallyhrithik.github.io/primary.os/
+explore at https://officiallyhrithik.github.io/primary.os/
