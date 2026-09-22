@@ -47,9 +47,6 @@ NovaOS/
 
 🚀 Getting Started
 
-Clone the repository:
-
-git clone https://officiallyhrithik.github.io/nova.os/
 
 Open the project:
 
@@ -82,4 +79,4 @@ officiallyhrithik
 Built with curiosity, code, and a lot of ☕.
 
 ---
-explore at https://officiallyhrithik.github.io/nova.os
+explore at  officiallyhrithik.github.io/primary.os/
